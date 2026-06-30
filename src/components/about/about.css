@@ -1,0 +1,136 @@
+/* تنسيق حاوية قسم "عن" باستخدام شبكة (grid) */
+.about_container{
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+}
+
+/* تنسيق الحاوية الرئيسية للصورة الشخصية */
+.about_me{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
+}
+
+/* تنسيق الصورة نفسها مع تأثير دوران أولي */
+.about_me_image{
+    transform: rotate(10deg);
+    border-radius: 2rem;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+/* تأثير عند تمرير الماوس فوق الصورة (إلغاء الدوران) */
+.about_me_image:hover{
+    transform: rotate(0deg);
+}
+
+
+/* تنسيق حاوية البطاقات لتظهر في 3 أعمدة متساوية */
+.about_cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* تنسيق شكل البطاقة الواحدة */
+.about_card{
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+/* تأثير عند تمرير الماوس فوق البطاقة (تصبح شفافة مع إظهار حدودها) */
+.about_card:hover{
+    background: transparent;
+    border-color: var(--color-bg-variant);
+}
+
+
+
+/* تنسيق الأيقونة داخل البطاقة */
+.about_icon{
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* تنسيق العنوان الفرعي داخل البطاقة */
+.about_card h5{
+    font-size: 0.9rem;
+}
+
+/* تنسيق النص الصغير داخل البطاقة */
+.about_card small{
+    font-size: 0.7rem;
+    color: var(--color-light);
+}
+
+
+
+/* تنسيق الفقرات داخل محتوى قسم "عن" */
+.about_content p {
+    margin: 2rem 0 2.6rem;
+    color: var(--color-light);
+}
+
+
+
+
+/* تعديل على الشاشات ب حجمها يسطا  */
+
+/* تنسيق تجاوبي للشاشات ذات العرض الأقصى 1024 بكسل */
+@media (max-width: 1024px) {
+    /* تغيير تخطيط الحاوية ليكون عموداً واحداً */
+    .about_container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    /* تعديل عرض ومساحات الصورة الشخصية */
+    .about_me {
+        width: 50%;
+        margin: 2rem auto 4rem;
+    }
+
+    /* تعديل هوامش الفقرات داخل المحتوى */
+    .about_content p {
+        margin: 1.5rem 0 1.5rem;
+    }
+}
+
+
+
+
+
+
+/* تنسيق تجاوبي للشاشات الصغيرة بعرض أقصى 600 بكسل */
+@media (max-width: 600px) {
+    /* تعديل عرض ومساحات الصورة للصغيرة */
+    .about_me {
+        width: 65%;
+        margin: 0rem auto 3rem;
+    }
+
+    /* تغيير تخطيط البطاقات لعمودين */
+    .about_cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    /* توسيط المحتوى النصي */
+    .about_content {
+        text-align: center;
+    }
+
+    /* تعديل هوامش الفقرات */
+    .about_content p {
+        margin: 1.5rem 0;
+    }
+}
+
+

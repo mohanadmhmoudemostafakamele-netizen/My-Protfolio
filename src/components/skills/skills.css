@@ -1,0 +1,87 @@
+/* حاوية المهارات الرئيسية */
+.container_skills {
+    display: flex;                /* استخدام نظام الفليكس للعرض */
+    justify-content: space-between; /* توزيع المسافات بالتساوي */
+    align-items: center;          /* محاذاة العناصر في المنتصف */
+    flex-wrap: wrap;              /* السماح بلف العناصر عند ضيق المساحة */
+}
+
+/* تنسيق بطاقة المهارة الواحدة */
+.container_skills .card_skill {
+    width: 24%;                   /* عرض البطاقة (حوالي ربع المساحة) */
+    display: flex;                /* توزيع محتويات البطاقة باستخدام فليكس */
+    align-items: center;          /* محاذاة المحتويات عمودياً */
+    gap: 10px;                    /* مسافة فاصلة بين الأيقونة والنص */
+    border: 1px solid var(--color-bg-variant); /* إطار للبطاقة بلون متغير */
+    padding: 10px;                /* مسافة داخلية للبطاقة */
+    border-radius: 12px;          /* جعل الزوايا دائرية */
+    margin-bottom: 20px;          /* مسافة سفلية بين البطاقات */
+}
+
+/* تنسيق أيقونة المهارة */
+.container_skills .card_skill .icon {
+    width: 65px;
+    height: 65px;
+    padding: 7px;
+    border-radius: 10px;
+    background: var(--color-bg-variant);
+}
+
+
+
+
+/* تنسيق عنوان المهارة داخل البطاقة */
+.container_skills .card_skill h4 {
+    font-size: 16px; /* ضبط حجم الخط للعنوان */
+}
+
+/* تنسيق الوصف أسفل العنوان */
+.container_skills .card_skill p {
+    font-size: 14px; /* ضبط حجم الخط للوصف ليكون أصغر قليلاً */
+}
+
+
+
+
+/* responsive */
+
+
+
+
+
+
+
+/* للشاشات التي يقل عرضها عن 1024 بكسل */
+@media (max-width: 1024px) {
+    .container_skills .card_skill {
+        width: 48%; /* تعديل العرض ليناسب الشاشات المتوسطة */
+    }
+}
+
+
+
+
+
+/* للشاشات التي لا يتجاوز عرضها 600 بكسل (مثل الهواتف الذكية) */
+@media (max-width: 600px) {
+    .container_skills .card_skill {
+        width: 49%; /* تعديل عرض البطاقة */
+    }
+
+    /* تصغير حجم الأيقونة لتناسب الشاشات الصغيرة */
+    .container_skills .card_skill .icon {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+
+    /* تصغير حجم خط العنوان */
+    .container_skills .card_skill h4 {
+        font-size: 13px;
+    }
+
+    /* تصغير حجم خط الوصف */
+    .container_skills .card_skill p {
+        font-size: 10px;
+    }
+}

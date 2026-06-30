@@ -1,0 +1,138 @@
+.home{
+    height: 100vh;
+    padding-top: 100px;
+    overflow: hidden;
+}
+
+.home_container{
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+.btns{
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 2.5rem;
+    justify-content: center;
+}
+
+.home_container h4{
+    font-size: 1.5rem;
+}
+
+.home_container .me {
+  width: 350px; /* حجم مناسب وموزون */
+  height: 450px; /* طول متناسق */
+  
+  /* خلفية متدرجة تعطي تأثير العمق وتندمج مع الموقع */
+  background: linear-gradient(180deg, #3d8fd9, #101e32);
+  
+  /* شكل القوس بدون حدود (borders) */
+  border-radius: 175px 175px 0 0;
+  
+  /* إزالة أي إطارات أو ظلال حادة */
+  border: none;
+  box-shadow: none;
+  
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden; /* لضمان بقاء الصورة داخل حدود القوس */
+  
+  /* لمسة إضافية لتنعيم الحواف */
+  transition: all 0.4s ease;
+}
+
+/* تنسيق الصورة */
+.home_container .me img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* تغطية كاملة للمساحة */
+  object-position: center top; /* إظهار الجزء العلوي من الصورة (الرأس والجزء العلوي من الجسم) */
+  
+  /* تعديل بسيط للإضاءة لتبدو طبيعية */
+  filter: brightness(1.05) contrast(1.05);
+}
+
+
+/* تنسيق القسم الرئيسي ليأخذ كامل ارتفاع الشاشة */
+.home {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* تنسيق حاوية الأيقونات لتكون في أسفل اليسار */
+.home_socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  position: absolute;
+  left: 2rem;
+  bottom: 3rem;
+}
+
+/* تنسيق الأيقونات نفسها */
+.home_socials a {
+  color: #3d8fd9;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.home_socials a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* الخط الرأسي تحت الأيقونات */
+.home_socials::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 2rem;
+  background: #3d8fd9;
+  margin-top: 0.5rem;
+}
+
+/* تنسيق رابط الـ Scroll Down في اليمين */
+.scroll_down {
+  position: absolute;
+  right: -35px;
+  bottom: 80px;
+  transform: rotate(90deg);
+  font-weight: 300;
+  color: #3d8fd9;
+  transition: 0.3s;
+}
+
+.scroll_down:hover {
+  color: #fff;
+}
+
+
+/* Resoponsive */
+
+@media (max-width:1024px) {
+    .home{
+        height: 68vh;
+    }
+}
+
+@media (max-width:1024px) {
+    .home{
+        height: auto;
+        padding-top: 5rem;
+    }
+    .home_socials , .scroll_down{
+          display: ;
+    }
+    .home h1{
+        font-size: 2rem;
+    }
+    .home_container .me{
+        max-width: 100%;
+        width: 300px;
+    }
+}

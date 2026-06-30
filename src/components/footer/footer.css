@@ -1,0 +1,77 @@
+/* تنسيق قسم التذييل (Footer) */
+footer{
+    background: var(--color-primary);
+    padding: 40px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 100px;
+}
+
+/* تنسيق الروابط داخل التذييل */
+footer a{
+    color: var(--color-bg);
+}
+
+
+
+/* تنسيق شعار الفوتر */
+.footer_logo{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+
+/* تنسيق روابط التنقل (Permalinks) */
+.permalinks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 auto 30px;
+}
+
+
+/* تنسيق أيقونات التواصل الاجتماعي في الفوتر */
+.footer_socials{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+/* تنسيق الروابط داخل قسم التواصل في الفوتر */
+.footer_socials a{
+    background: var(--color-bg);
+    color: var(--color-white);
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+/* تنسيق تأثير التمرير (Hover) لروابط التواصل في الفوتر */
+.footer_socials a:hover{
+    background: transparent;
+    border-color: var(--color-bg);
+    color: var(--color-bg);
+}
+
+
+/* تنسيق حقوق النشر */
+.footer_copyright {
+    margin-bottom: 4rem;
+    color: var(--color-bg);
+}
+.footer_copyright a {
+    color: var(--color-white);
+}
+
+
+@media (max-width: 600px) {
+  .permalinks {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

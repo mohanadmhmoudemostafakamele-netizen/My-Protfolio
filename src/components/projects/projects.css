@@ -1,0 +1,56 @@
+/* حاوية المشاريع الرئيسية */
+.projects_container {
+    display: flex;                /* استخدام نظام الفليكس لتنظيم المشاريع */
+    justify-content: space-between; /* توزيع المسافات بين المشاريع */
+    flex-wrap: wrap;              /* السماح بلف العناصر للسطر التالي عند ضيق المساحة */
+}
+
+/* تنسيق عنصر المشروع الفردي */
+.projects_container .portfolio_item {
+    width: 31%;                   /* عرض المشروع (يسمح بوضع 3 مشاريع في السطر) */
+    margin-bottom: 50px;          /* مسافة سفلية بين صفوف المشاريع */
+    background: var(--color-bg-variant); /* استخدام متغير للون الخلفية */
+    padding: 20px;                /* مسافة داخلية للبطاقة */
+    border-radius: 20px;          /* جعل زوايا البطاقة دائرية */
+    border: 1px solid transparent; /* إطار شفاف افتراضي */
+    transition: var(--transition); /* تطبيق تأثير انتقالي عند التفاعل */
+}
+
+/* تأثير التفاعل عند مرور الماوس على المشروع */
+.projects_container .portfolio_item:hover {
+    border-color: var(--color-primary); /* تغيير لون الإطار عند التفاعل */
+    background: var(--transition);            /* جعل الخلفية شفافة عند التفاعل */
+}
+
+
+/* تنسيق الصورة داخل البطاقة */
+.portfolio_item_img {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* تنسيق العنوان والأزرار */
+.portfolio_item h3 {
+    margin: 22px 0 35px;
+}
+
+.portfolio_item_btns {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+    .projects_container .portfolio_item {
+        width: 48%;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects_container .portfolio_item {
+        width: 100%;
+    }
+}
